@@ -28,8 +28,8 @@ namespace YSQ.tests.Historical
                 It should_return_the_historical_prices = () =>
                     historical_prices.ShouldContain(new[]
                                                     {
-                                                        new HistoricalPrice(new DateTime(2014, 1, 2), 27.61m),
-                                                        new HistoricalPrice(new DateTime(2014, 1, 3), 27.59m)
+                                                        new HistoricalPrice(new DateTime(2014, 1, 2), 27.61m,27.61m),
+                                                        new HistoricalPrice(new DateTime(2014, 1, 3), 27.59m,27.61m)
                                                     });
 
                 static IEnumerable<HistoricalPrice> historical_prices;
@@ -49,8 +49,8 @@ namespace YSQ.tests.Historical
                 It should_return_the_historical_prices = () =>
                     historical_prices.ShouldContain(new[]
                                                     {
-                                                        new HistoricalPrice(new DateTime(2014, 1, 2), 27.61m),
-                                                        new HistoricalPrice(new DateTime(2014, 1, 3), 27.59m)
+                                                        new HistoricalPrice(new DateTime(2014, 1, 2), 27.61m,27.61m),
+                                                        new HistoricalPrice(new DateTime(2014, 1, 3), 27.59m,27.59m)
                                                     });
 
                 static IEnumerable<HistoricalPrice> historical_prices;

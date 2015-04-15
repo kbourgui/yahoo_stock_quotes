@@ -19,7 +19,8 @@ namespace YSQ.core.Historical.Response
         {
             var rows = csv_response_parser.ParseToRows(response.WebResponse);
 
-            return rows.Rows.Select(x => new HistoricalPrice(DateTime.Parse((string)x.Date, new CultureInfo("en-US")), Decimal.Parse(x.Close, new CultureInfo("en-US")))).ToList();
+            return rows.Rows.Select(x => new HistoricalPrice(DateTime.Parse((string)x.Date, new CultureInfo("en-US")), Decimal.Parse(x.Close, new CultureInfo("en-US")),
+                Decimal.Parse(x.Open, new CultureInfo("en-US")))).ToList();
         }
     }
 }

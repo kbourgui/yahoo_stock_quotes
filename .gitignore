@@ -1,26 +1,43 @@
-empty.cs
-*/obj
-*/bin
-*/obj/*
-*/bin/*
-*.chm
-_[Rr]e[Ss]harper.*
-*.csproj.user
-*.[Rr]e[Ss]harper.user
-*.[Rr]e[Ss]harper
-*.suo
-*.cache
-*.csproj-[1-9]*
-*.csproj[1-9]*
-*~
-*.sql
-*.swp
-*.swo
-/source/docs/Help/*.*
-artifacts
-UpgradeLog.XML
-_UpgradeReport_Files
-git.yaml
-Gemfile.lock
-*mm_cache*
-db_dev.rb
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk

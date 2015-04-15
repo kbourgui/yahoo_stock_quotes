@@ -15,10 +15,7 @@ namespace YSQ.tests.Quotes
         [Subject(typeof(QuoteService))]
         internal class when_getting_all_the_data : concern
         {
-            Establish c = () =>
-            {
-                sut_factory.create_using(() => new QuoteService());
-            };
+            Establish c = () => sut_factory.create_using(() => new QuoteService());
 
             Because of = () =>
                 returned_quotes = sut.Quote("MSFT", "GOOG", "^SP500FTR").Return(Enum.GetValues(typeof(QuoteReturnParameter)).Cast<QuoteReturnParameter>().ToArray());

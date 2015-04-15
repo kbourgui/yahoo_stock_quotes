@@ -6,16 +6,18 @@ namespace YSQ.core.Historical
     {
         public DateTime Date { get; private set; }
         public decimal Price { get; private set; }
+        public decimal Open { get; private set; }
 
-        public HistoricalPrice(DateTime date, decimal price)
+        public HistoricalPrice(DateTime date, decimal price,decimal open)
         {
             Date = date;
             Price = price;
+            Open = open;
         }
 
         protected bool Equals(HistoricalPrice other)
         {
-            return Date.Equals(other.Date) && Price == other.Price;
+            return Date.Equals(other.Date) && Price == other.Price && Open == other.Open;
         }
 
         public override bool Equals(object obj)
@@ -33,7 +35,7 @@ namespace YSQ.core.Historical
         {
             unchecked
             {
-                return (Date.GetHashCode() * 397) ^ Price.GetHashCode();
+                return (Date.GetHashCode() * 397) ^ Price.GetHashCode() ^ Open.GetHashCode();
             }
         }
     }
