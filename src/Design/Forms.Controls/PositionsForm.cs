@@ -45,8 +45,8 @@ namespace Stock.Design.Forms.Controls
             var getListPriceSorted = (getObject as List<HistoricalPrice>).OrderBy(pr => pr.Date).ToList();
             foreach (HistoricalPrice price in getListPriceSorted)
             {
-                serieOpen.Points.AddXY(price.Date,price.Open);
-                serieCLose.Points.AddXY(price.Date,price.Price);
+                serieOpen.Points.AddXY(price.Date,Convert.ToDouble(price.Open) );
+                serieCLose.Points.AddXY(price.Date,Convert.ToDouble(price.Price));
             }
 
             var bindingList = new SortableBindingList<HistoricalPrice>(getObject as List<HistoricalPrice>);
