@@ -43,6 +43,7 @@ namespace Stock.Design.Forms.Controls
             if (getClickedBtn == BTN_Stocks) getMarketDataType = CustomEnum.MarketDataType.Stock;
             else if (getClickedBtn == BTN_Etf) getMarketDataType = CustomEnum.MarketDataType.ETF;
             else if (getClickedBtn == BTN_Index) getMarketDataType = CustomEnum.MarketDataType.Index;
+            else if (getClickedBtn == BTN_Bonds) getMarketDataType = CustomEnum.MarketDataType.Bond;
             else throw new Exception(string.Format("No functon defined for button {0}.",getClickedBtn.Name));
 
 
@@ -54,6 +55,12 @@ namespace Stock.Design.Forms.Controls
             var source = new BindingSource(bindingList, null);
 
             DGV_MarketData.DataSource = source;
+
+            foreach (var control in GetAll(this,typeof(Button)))
+            {
+                var btn = (Button) control;
+                btn.BackColor = btn.Name == getClickedBtn.Name ? Color.Yellow : BackColor;
+            }
         }
 
         private void DGV_MarketData_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -104,12 +111,21 @@ namespace Stock.Design.Forms.Controls
             }
         }
 
-        public void DoubleBufferedDataGridView(bool setting)
+        private void DoubleBufferedDataGridView(bool setting)
         {
             Type dgvType = DGV_MarketData .GetType();
             PropertyInfo pi = dgvType.GetProperty("DoubleBuffered",
                   BindingFlags.Instance | BindingFlags.NonPublic);
             pi.SetValue(DGV_MarketData, setting, null);
+        }
+
+        private IEnumerable<Control> GetAll(Control control, Type type)
+        {
+            var controls = control.Controls.Cast<Control>();
+
+            return controls.SelectMany(ctrl => GetAll(ctrl, type))
+                                      .Concat(controls)
+                                      .Where(c => c.GetType() == type);
         }
 
         private void DGV_MarketData_CellToolTipTextNeeded(object sender, DataGridViewCellToolTipTextNeededEventArgs e)

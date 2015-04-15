@@ -28,6 +28,10 @@ namespace YSQ.core.MarketData
                     splitTickers = Resources.GetAllIndex.Split(',');
                     break;
 
+                case CustomEnum.MarketDataType.Bond:
+                    splitTickers = Resources.GetBonds.Split(',');
+                    break;
+
                 default: throw new Exception(string.Format("Market Data request for type {0} not defined", enumerationMarketData));
             }
 

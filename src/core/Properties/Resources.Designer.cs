@@ -86,5 +86,14 @@ namespace YSQ.core.Properties {
                 return ResourceManager.GetString("GetAllStocksDetail", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;A1GZY8.DU&quot;,&quot;A1HKJW.F&quot;,&quot;A0DXAK.DE&quot;,&quot;IPRU8351.BO&quot;,&quot;A1GY7M.HM&quot;,&quot;A1G1UN.MU&quot;,&quot;B:SRTRANSFIN-NY.N&quot;,&quot;83HS.L&quot;,&quot;ACAHJ.PA&quot;,&quot;XS0584356942.TI&quot;,&quot;14LF.L&quot;,&quot;A0TWQC.SG&quot;,&quot;INN-DBG.TO&quot;,&quot;113541.DU&quot;,&quot;A0TWVK.F&quot;,&quot;A1GLWD.HM&quot;,&quot;A1A1K0.BE&quot;,&quot;MOBK03.OL&quot;,&quot;777348.DU&quot;,&quot;BSLFTPJKDG.BO&quot;,&quot;105343.MU&quot;,&quot;AUD300.SW&quot;,&quot;AUD501.SW&quot;,&quot;A0E5JD.SG&quot;,&quot;A0NWR3.DU&quot;,&quot;44IY.L&quot;,&quot;A1GW3S.BE&quot;,&quot;X80057.MI&quot;,&quot;DZ776Y.F&quot;,&quot;43MX.L&quot;,&quot;51FW.L&quot;,&quot;BNP1Q8.DU&quot;,&quot;A1GLR6.MU&quot;,&quot;A1AL0J.SG&quot;,&quot;I67219.TI&quot;,&quot;A0Z13T.SG&quot;,&quot;ABN5HZ.SG&quot;,&quot;A1A2U3.HA&quot;,&quot;US697.SW&quot;,&quot;A1HRHZ.DU&quot;,&quot;A1AV4L.F&quot;,&quot;A1GPEG.BE&quot;,&quot;A1ZB67. [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string GetBonds {
+            get {
+                return ResourceManager.GetString("GetBonds", resourceCulture);
+            }
+        }
     }
 }
